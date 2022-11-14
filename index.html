@@ -321,9 +321,42 @@
           <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Next Goals <span> Hundreds Million Rupiah</span></h2>
           <hr class="lines wow zoomIn" data-wow-delay="0.3s">
         </div>
-        <div class="row">
+        
+        
+        <div class="d-flex justify-content-center align-items-center mt-5">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+          <body>
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+          <script>
+          var xValues = [2020,2021,2022];
+          var yValues = [7000000,20135733,32000000];
+
+          new Chart("myChart", {
+            type: "line",
+            data: {
+              labels: xValues,
+              datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(0,0,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+              }]
+            },
+            options: {
+              legend: {display: false},
+              scales: {
+                yAxes: [{ticks: {min: 1000000, max:100000000}}],
+              }
+            }
+          });
+          </script>
+        </div>
+
+        <div class="row mt-5">
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+            <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 32%;" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100">32%</div>
           </div>
          
         </div>  
